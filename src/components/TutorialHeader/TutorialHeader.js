@@ -7,12 +7,10 @@ import {
   HeaderNavigation,
   HeaderMenuButton,
   HeaderMenuItem,
-  HeaderGlobalBar,
   SkipToContent,
   SideNav,
   SideNavItems,
   HeaderSideNavItems,
-  Button,
 } from '@carbon/react';
 
 import Link from 'next/link';
@@ -66,11 +64,6 @@ const SiteHeader = () => (
             </HeaderSideNavItems>
           </SideNavItems>
         </SideNav>
-        <HeaderGlobalBar>
-          <Button size="sm" kind="tertiary" href="#contact">
-            Get API Key
-          </Button>
-        </HeaderGlobalBar>
       </Header>
     )}
   />
