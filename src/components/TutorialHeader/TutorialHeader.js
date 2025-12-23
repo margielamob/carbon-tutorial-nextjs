@@ -1,4 +1,4 @@
-"use client";
+'use client';
 
 import {
   Header,
@@ -8,20 +8,19 @@ import {
   HeaderMenuButton,
   HeaderMenuItem,
   HeaderGlobalBar,
-  HeaderGlobalAction,
   SkipToContent,
   SideNav,
   SideNavItems,
   HeaderSideNavItems,
-} from "@carbon/react";
-import { Switcher, Notification, UserAvatar } from "@carbon/icons-react";
+  Button,
+} from '@carbon/react';
 
-import Link from "next/link";
+import Link from 'next/link';
 
-const TutorialHeader = () => (
+const SiteHeader = () => (
   <HeaderContainer
     render={({ isSideNavExpanded, onClickSideNavExpand }) => (
-      <Header aria-label="Carbon Tutorial">
+      <Header aria-label="Six Day's Work">
         <SkipToContent />
         <HeaderMenuButton
           aria-label="Open menu"
@@ -29,11 +28,20 @@ const TutorialHeader = () => (
           isActive={isSideNavExpanded}
         />
         <Link href="/" passHref legacyBehavior>
-          <HeaderName prefix="IBM">Carbon Tutorial</HeaderName>
+          <HeaderName prefix="">Six Day&apos;s Work</HeaderName>
         </Link>
-        <HeaderNavigation aria-label="Carbon Tutorial">
-          <Link href="/repos" passHref legacyBehavior>
-            <HeaderMenuItem>Repositories</HeaderMenuItem>
+        <HeaderNavigation aria-label="Six Day's Work">
+          <Link href="#features" passHref legacyBehavior>
+            <HeaderMenuItem>Features</HeaderMenuItem>
+          </Link>
+          <Link href="#use-cases" passHref legacyBehavior>
+            <HeaderMenuItem>Use Cases</HeaderMenuItem>
+          </Link>
+          <Link href="#pricing" passHref legacyBehavior>
+            <HeaderMenuItem>Pricing</HeaderMenuItem>
+          </Link>
+          <Link href="#contact" passHref legacyBehavior>
+            <HeaderMenuItem>Contact</HeaderMenuItem>
           </Link>
         </HeaderNavigation>
         <SideNav
@@ -43,34 +51,29 @@ const TutorialHeader = () => (
         >
           <SideNavItems>
             <HeaderSideNavItems>
-              <Link href="/repos" passHref legacyBehavior>
-                <HeaderMenuItem>Repositories</HeaderMenuItem>
+              <Link href="#features" passHref legacyBehavior>
+                <HeaderMenuItem>Features</HeaderMenuItem>
+              </Link>
+              <Link href="#use-cases" passHref legacyBehavior>
+                <HeaderMenuItem>Use Cases</HeaderMenuItem>
+              </Link>
+              <Link href="#pricing" passHref legacyBehavior>
+                <HeaderMenuItem>Pricing</HeaderMenuItem>
+              </Link>
+              <Link href="#contact" passHref legacyBehavior>
+                <HeaderMenuItem>Contact</HeaderMenuItem>
               </Link>
             </HeaderSideNavItems>
           </SideNavItems>
         </SideNav>
         <HeaderGlobalBar>
-          <HeaderGlobalAction
-            aria-label="Notifications"
-            tooltipAlignment="center"
-            className="action-icons"
-          >
-            <Notification size={20} />
-          </HeaderGlobalAction>
-          <HeaderGlobalAction
-            aria-label="User Avatar"
-            tooltipAlignment="center"
-            className="action-icons"
-          >
-            <UserAvatar size={20} />
-          </HeaderGlobalAction>
-          <HeaderGlobalAction aria-label="App Switcher" tooltipAlignment="end">
-            <Switcher size={20} />
-          </HeaderGlobalAction>
+          <Button size="sm" kind="tertiary" href="#contact">
+            Get API Key
+          </Button>
         </HeaderGlobalBar>
       </Header>
     )}
   />
 );
 
-export default TutorialHeader;
+export default SiteHeader;
