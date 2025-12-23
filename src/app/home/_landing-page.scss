@@ -31,6 +31,7 @@ html {
 .landing-page__heading {
   @include type-style('productive-heading-06');
   max-width: 800px;
+  width: 100%;
   margin: 0 auto $spacing-03;
 
   @include breakpoint(lg) {
@@ -41,6 +42,7 @@ html {
 .landing-page__tagline {
   @include type-style('productive-heading-04');
   max-width: 700px;
+  width: 100%;
   margin: 0 auto $spacing-06;
   color: $support-info;
   font-weight: 400;
@@ -49,6 +51,7 @@ html {
 .landing-page__subheading {
   @include type-style('productive-heading-03');
   max-width: 700px;
+  width: 100%;
   margin: 0 auto $spacing-07;
   color: $text-secondary;
 }
